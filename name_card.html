@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christy Zheng | 方案工程師</title>
+    <style>
+        /* 全局樣式重置 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #0f172a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            position: relative;
+            overflow-x: hidden;
+            color: #f8fafc;
+        }
+
+        /* 背景氣氛光暈（襯托磨砂玻璃質感） */
+        .bg-glow-1 {
+            position: absolute;
+            top: 20%;
+            left: 25%;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.45) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            filter: blur(50px);
+            z-index: 0;
+        }
+
+        .bg-glow-2 {
+            position: absolute;
+            bottom: 20%;
+            right: 25%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.35) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        /* 名片卡片容器 - Glassmorphism 效果 */
+        .card-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 24px;
+            padding: 40px 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* 個人頭像區塊 */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #c084fc, #6366f1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .name {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #a7f3d0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* 自我介紹 */
+        .bio {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        /* 專長技能區塊 */
+        .skills-section {
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #94a3b8;
+            margin-bottom: 14px;
+        }
+
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skills-list li {
+            font-size: 0.85rem;
+            color: #f1f5f9;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 6px 14px;
+            border-radius: 20px;
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .skills-list li:hover {
+            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* 聯絡區塊 */
+        .contact-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .email {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .email:hover {
+            color: #38bdf8;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 背景柔和光暈 -->
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- 名片主卡片 -->
+    <main class="card-container">
+        <header class="header">
+            <div class="avatar" aria-label="Christy Zheng 頭像">CZ</div>
+            <h1 class="name">Christy Zheng</h1>
+            <p class="title">方案工程師</p>
+        </header>
+
+        <p class="bio">
+            專注於智慧物流與自動化流程整合，擅長解析複雜的場域需求，並精準規劃 AMR 最佳路線與導入時程，協助企業流暢實現智慧轉型。
+        </p>
+
+        <section class="skills-section">
+            <h2 class="section-title">專業技能</h2>
+            <ul class="skills-list">
+                <li>AMR需求分析</li>
+                <li>人工轉自動化流程</li>
+                <li>AMR路線規劃</li>
+                <li>專案管理</li>
+                <li>時程控管</li>
+            </ul>
+        </section>
+
+        <footer class="contact-section">
+            <a href="mailto:christy.zheng@example.com" class="email">sandy881133@gmail.com</a>
+            <a href="mailto:christy.zheng@example.com" class="cta-button">與我聯絡</a>
+        </footer>
+    </main>
+
+</body>
+
+</html>

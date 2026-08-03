@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEGANCE | 都會女性質感穿搭</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #F9F8F6; color: #2B2B2B; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .btn-cta { transition: all 0.3s ease; border: 1px solid #2B2B2B; }
+        .btn-cta:hover { background-color: #2B2B2B; color: #F9F8F6; }
+        .btn-outline { border: 1px solid #929E8B; color: #929E8B; transition: all 0.3s ease; }
+        .btn-outline:hover { background-color: #929E8B; color: white; }
+        .hover-zoom { overflow: hidden; }
+        .hover-zoom img { transition: transform 0.6s ease; }
+        .hover-zoom:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <nav class="p-8 flex justify-between items-center bg-[#F9F8F6]">
+        <h1 class="text-3xl font-bold tracking-[6px] serif">ELEGANCE</h1>
+        <div class="space-x-8 text-sm uppercase tracking-widest hidden md:flex font-medium">
+            <a href="#" class="hover:text-[#929E8B]">新品</a>
+            <a href="#" class="hover:text-[#929E8B]">團購專區</a>
+            <a href="#" class="hover:text-[#929E8B]">社群靈感</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[80vh] flex items-center px-12 bg-[#F9F8F6]">
+        <div class="w-full md:w-2/5 z-10">
+            <h2 class="text-6xl serif mb-6 leading-tight">都會女性的<br>質感穿搭提案</h2>
+            <p class="text-lg tracking-[4px] mb-10 italic opacity-70 serif">NEW COLLECTION 2026</p>
+            <button class="bg-[#2B2B2B] text-white px-10 py-4 rounded-full btn-cta">探索本季新品</button>
+        </div>
+        <div class="hidden md:block w-3/5 h-[70vh] rounded-2xl overflow-hidden shadow-xl absolute right-12">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="Hero">
+        </div>
+    </header>
+
+    <section class="py-24 px-12 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl serif mb-12 text-center">限時揪團專區</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Group Item 1 -->
+                <div class="border border-[#E5E5E5] p-4 rounded-lg hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1598331132233-2098f09b3096?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover rounded mb-4">
+                    <h4 class="font-bold mb-1">極簡法式襯衫</h4>
+                    <p class="text-xs text-gray-500 mb-3">揪團達 5 人，享 75 折</p>
+                    <button class="w-full btn-outline py-2 rounded text-sm">發起團購</button>
+                </div>
+                <!-- Group Item 2 -->
+                <div class="border border-[#E5E5E5] p-4 rounded-lg hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover rounded mb-4">
+                    <h4 class="font-bold mb-1">西裝質感套裝</h4>
+                    <p class="text-xs text-gray-500 mb-3">限時 48 小時，7 折</p>
+                    <button class="w-full btn-outline py-2 rounded text-sm">發起團購</button>
+                </div>
+                <!-- Group Item 3 -->
+                <div class="border border-[#E5E5E5] p-4 rounded-lg hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8d?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover rounded mb-4">
+                    <h4 class="font-bold mb-1">親膚針織開衫</h4>
+                    <p class="text-xs text-gray-500 mb-3">買二送一，姐妹揪團</p>
+                    <button class="w-full btn-outline py-2 rounded text-sm">發起團購</button>
+                </div>
+                <!-- Group Item 4 -->
+                <div class="border border-[#E5E5E5] p-4 rounded-lg hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover rounded mb-4">
+                    <h4 class="font-bold mb-1">百搭寬褲系列</h4>
+                    <p class="text-xs text-gray-500 mb-3">團購滿額免運</p>
+                    <button class="w-full btn-outline py-2 rounded text-sm">發起團購</button>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="border border-[#2B2B2B] px-8 py-3 rounded-full hover:bg-[#2B2B2B] hover:text-white transition-all uppercase tracking-widest text-sm">更多團購</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-12 bg-[#F9F8F6]">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl serif mb-12 text-center">社群穿搭靈感</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="hover-zoom aspect-square rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
+                </div>
+                <div class="hover-zoom aspect-square rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
+                </div>
+                <div class="hover-zoom aspect-square rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
+                </div>
+                <div class="hover-zoom aspect-square rounded overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1509635446467-f131102652b6?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center text-gray-400 bg-white border-t border-[#E5E5E5]">
+        <p class="text-sm tracking-[2px] uppercase serif">ELEGANCE COLLECTIONS</p>
+        <p class="text-xs mt-4">© 2026 All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            // Interaction logic can be added here
+            console.log("ELEGANCE Page Initialized");
+        });
+    </script>
+</body>
+</html>
