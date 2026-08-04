@@ -162,13 +162,30 @@
 
   /* Hero visual: 晨間著裝時序卡 */
   .hero-visual{position:relative}
+  .frame-waves{
+    position:absolute;inset:-9% -11%;z-index:0;pointer-events:none;
+  }
+  .frame-waves .fwave{
+    fill:none;stroke-width:1.6;stroke-linecap:round;vector-effect:non-scaling-stroke;
+    stroke-dasharray:9 8;
+  }
+  .frame-waves .fwave-1{stroke:var(--latte);opacity:.5;animation:waveFlow 3.4s linear infinite}
+  .frame-waves .fwave-2{stroke:var(--sage);opacity:.4;animation:waveFlow 4s linear infinite reverse}
+  .frame-waves .fwave-3{stroke:var(--charcoal-soft);opacity:.22;animation:waveFlow 4.6s linear infinite}
+  @keyframes waveFlow{to{stroke-dashoffset:-68}}
   .hero-frame{
-    position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;
+    position:relative;z-index:1;border-radius:200px 200px 24px 24px;overflow:hidden;
     aspect-ratio:3/4;box-shadow:var(--shadow);background:var(--alabaster-deep);
   }
   .hero-frame img{width:100%;height:100%;object-fit:cover;display:block}
+
+.blob img{width:100%;height:100%;
+  /* aspect-ratio: 1; */
+  clip-path: shape(from 90.51% 49.61%,curve to 92.82% 62.05% with 92.75% 55.40%,smooth to 89.95% 74.84%,smooth to 79.76% 82.36%,smooth to 67.76% 87.71%,smooth to 56.91% 94.14%,smooth to 43.84% 97.14%,smooth to 32.80% 91.04%,smooth to 20.88% 83.77%,smooth to 11.13% 76.31%,smooth to 10.20% 62.87%,smooth to 10.07% 50.54%,smooth to 9.90% 38.87%,smooth to 12.93% 26.82%,smooth to 19.83% 16.35%,smooth to 31.09% 11.07%,smooth to 43.40% 7.96%,smooth to 56.04% 4.53%,smooth to 68.66% 6.88%,smooth to 78.13% 15.96%,smooth to 84.20% 27.00%,smooth to 87.43% 38.18%,smooth to 90.51% 49.61%);
+}
+
   .hero-float{
-    position:absolute;background:rgba(248,246,242,.94);backdrop-filter:blur(6px);
+    position:absolute;z-index:2;background:rgba(248,246,242,.94);backdrop-filter:blur(6px);
     border-radius:16px;padding:14px 20px;box-shadow:var(--shadow);
     display:flex;align-items:center;gap:14px;
   }
