@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="500" viewBox="0 0 600 500">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#ECEEE9"/><stop offset="1" stop-color="#DDE1D7"/></linearGradient></defs>
+<rect width="600" height="500" fill="url(#g)"/>
+<circle cx="432" cy="140" r="110" fill="#7A8B7B" opacity="0.16"/>
+<rect x="72" y="275" width="300" height="2" fill="#7A8B7B" opacity="0.5"/>
+<text x="72" y="250" font-family="Georgia,serif" font-size="38" fill="#2D2926" opacity="0.82" letter-spacing="1">耳飾</text>
+<text x="72" y="315" font-family="Georgia,serif" font-size="19" fill="#2D2926" opacity="0.5" letter-spacing="4">EARRINGS</text>
+</svg>
